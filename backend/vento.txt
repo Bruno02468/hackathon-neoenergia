@@ -1,0 +1,1793 @@
+velocidade = 12.7
+
+velocidade = 10.1
+
+velocidade = 15.4
+
+velocidade = 12.3
+
+velocidade = 9.5
+
+velocidade = 14.3
+
+velocidade = 11.5
+
+velocidade = 5.6
+
+velocidade = 11.2
+
+velocidade = 12.5
+
+velocidade = 13.0
+
+velocidade = 15.5
+
+velocidade = 10.1
+
+velocidade = 10.5
+
+velocidade = 10.8
+
+velocidade = 10.8
+
+velocidade = 14.0
+
+velocidade = 17.7
+
+velocidade = 10.0
+
+velocidade = 15.1
+
+velocidade = 17.4
+
+velocidade = 3.2
+
+velocidade = 11.8
+
+velocidade = 11.9
+
+velocidade = 10.9
+
+velocidade = 16.0
+
+velocidade = 10.8
+
+velocidade = 14.7
+
+velocidade = 19.7
+
+velocidade = 22.4
+
+velocidade = 29.5
+
+velocidade = 18.4
+
+velocidade = 15.5
+
+velocidade = 13.5
+
+velocidade = 17.8
+
+velocidade = 15.3
+
+velocidade = 16.4
+
+velocidade = 13.0
+
+velocidade = 21.4
+
+velocidade = 25.1
+
+velocidade = 23.2
+
+velocidade = 22.0
+
+velocidade = 23.9
+
+velocidade = 18.3
+
+velocidade = 29.7
+
+velocidade = 24.0
+
+velocidade = 18.8
+
+velocidade = 21.2
+
+velocidade = 17.7
+
+velocidade = 19.7
+
+velocidade = 17.7
+
+velocidade = 16.5
+
+velocidade = 9.9
+
+velocidade = 9.7
+
+velocidade = 10.3
+
+velocidade = 9.3
+
+velocidade = 19.1
+
+velocidade = 9.6
+
+velocidade = 16.5
+
+velocidade = 8.4
+
+velocidade = 16.4
+
+velocidade = 12.8
+
+velocidade = 12.9
+
+velocidade = 17.8
+
+velocidade = 18.7
+
+velocidade = 17.0
+
+velocidade = 14.2
+
+velocidade = 15.5
+
+velocidade = 12.9
+
+velocidade = 20.5
+
+velocidade = 21.0
+
+velocidade = 22.0
+
+velocidade = 14.6
+
+velocidade = 26.7
+
+velocidade = 28.8
+
+velocidade = 14.8
+
+velocidade = 18.5
+
+velocidade = 21.1
+
+velocidade = 26.3
+
+velocidade = 22.4
+
+velocidade = 12.3
+
+velocidade = 18.8
+
+velocidade = 13.0
+
+velocidade = 16.9
+
+velocidade = 26.0
+
+velocidade = 16.1
+
+velocidade = 13.5
+
+velocidade = 20.9
+
+velocidade = 17.6
+
+velocidade = 16.4
+
+velocidade = 24.1
+
+velocidade = 25.7
+
+velocidade = 14.8
+
+velocidade = 18.9
+
+velocidade = 17.1
+
+velocidade = 16.5
+
+velocidade = 12.6
+
+velocidade = 20.4
+
+velocidade = 30.1
+
+velocidade = 16.9
+
+velocidade = 17.6
+
+velocidade = 11.2
+
+velocidade = 18.8
+
+velocidade = 20.8
+
+velocidade = 24.3
+
+velocidade = 20.2
+
+velocidade = 14.8
+
+velocidade = 14.5
+
+velocidade = 18.2
+
+velocidade = 20.2
+
+velocidade = 20.9
+
+velocidade = 22.3
+
+velocidade = 16.6
+
+velocidade = 22.4
+
+velocidade = 17.8
+
+velocidade = 28.9
+
+velocidade = 11.0
+
+velocidade = 18.4
+
+velocidade = 14.5
+
+velocidade = 14.2
+
+velocidade = 12.7
+
+velocidade = 12.1
+
+velocidade = 10.0
+
+velocidade = 14.8
+
+velocidade = 20.4
+
+velocidade = 20.3
+
+velocidade = 15.6
+
+velocidade = 17.7
+
+velocidade = 6.4
+
+velocidade = 20.4
+
+velocidade = 18.6
+
+velocidade = 23.8
+
+velocidade = 17.0
+
+velocidade = 16.5
+
+velocidade = 18.8
+
+velocidade = 19.1
+
+velocidade = 18.7
+
+velocidade = 14.2
+
+velocidade = 9.6
+
+velocidade = 13.5
+
+velocidade = 15.3
+
+velocidade = 13.5
+
+velocidade = 17.3
+
+velocidade = 19.1
+
+velocidade = 16.6
+
+velocidade = 25.3
+
+velocidade = 21.1
+
+velocidade = 18.2
+
+velocidade = 15.9
+
+velocidade = 14.1
+
+velocidade = 12.4
+
+velocidade = 10.2
+
+velocidade = 19.8
+
+velocidade = 27.4
+
+velocidade = 18.7
+
+velocidade = 16.7
+
+velocidade = 12.0
+
+velocidade = 13.7
+
+velocidade = 21.8
+
+velocidade = 20.9
+
+velocidade = 15.5
+
+velocidade = 7.6
+
+velocidade = 13.6
+
+velocidade = 17.7
+
+velocidade = 23.9
+
+velocidade = 27.1
+
+velocidade = 23.4
+
+velocidade = 24.8
+
+velocidade = 22.0
+
+velocidade = 17.9
+
+velocidade = 20.5
+
+velocidade = 17.3
+
+velocidade = 11.7
+
+velocidade = 13.2
+
+velocidade = 19.1
+
+velocidade = 31.3
+
+velocidade = 29.2
+
+velocidade = 29.3
+
+velocidade = 22.2
+
+velocidade = 15.1
+
+velocidade = 23.4
+
+velocidade = 21.6
+
+velocidade = 17.9
+
+velocidade = 16.7
+
+velocidade = 7.9
+
+velocidade = 17.5
+
+velocidade = 16.6
+
+velocidade = 15.5
+
+velocidade = 16.6
+
+velocidade = 17.2
+
+velocidade = 16.3
+
+velocidade = 26.0
+
+velocidade = 17.8
+
+velocidade = 14.8
+
+velocidade = 12.6
+
+velocidade = 14.5
+
+velocidade = 13.0
+
+velocidade = 17.0
+
+velocidade = 17.7
+
+velocidade = 15.5
+
+velocidade = 21.5
+
+velocidade = 20.4
+
+velocidade = 19.4
+
+velocidade = 17.0
+
+velocidade = 15.5
+
+velocidade = 15.9
+
+velocidade = 28.1
+
+velocidade = 24.5
+
+velocidade = 23.7
+
+velocidade = 19.9
+
+velocidade = 18.9
+
+velocidade = 14.3
+
+velocidade = 18.6
+
+velocidade = 17.2
+
+velocidade = 21.5
+
+velocidade = 25.3
+
+velocidade = 20.2
+
+velocidade = 19.8
+
+velocidade = 19.2
+
+velocidade = 18.7
+
+velocidade = 18.1
+
+velocidade = 15.0
+
+velocidade = 13.3
+
+velocidade = 16.0
+
+velocidade = 29.8
+
+velocidade = 28.9
+
+velocidade = 26.4
+
+velocidade = 24.0
+
+velocidade = 23.4
+
+velocidade = 16.6
+
+velocidade = 19.9
+
+velocidade = 20.7
+
+velocidade = 16.4
+
+velocidade = 14.5
+
+velocidade = 33.5
+
+velocidade = 28.0
+
+velocidade = 26.6
+
+velocidade = 17.4
+
+velocidade = 20.6
+
+velocidade = 12.8
+
+velocidade = 15.3
+
+velocidade = 17.2
+
+velocidade = 20.5
+
+velocidade = 14.8
+
+velocidade = 16.8
+
+velocidade = 24.5
+
+velocidade = 16.2
+
+velocidade = 18.6
+
+velocidade = 16.8
+
+velocidade = 14.6
+
+velocidade = 15.6
+
+velocidade = 15.7
+
+velocidade = 19.6
+
+velocidade = 17.4
+
+velocidade = 19.1
+
+velocidade = 13.6
+
+velocidade = 16.3
+
+velocidade = 15.5
+
+velocidade = 24.7
+
+velocidade = 24.7
+
+velocidade = 22.5
+
+velocidade = 9.4
+
+velocidade = 17.8
+
+velocidade = 22.9
+
+velocidade = 12.3
+
+velocidade = 16.2
+
+velocidade = 17.4
+
+velocidade = 23.6
+
+velocidade = 22.6
+
+velocidade = 15.9
+
+velocidade = 23.4
+
+velocidade = 15.5
+
+velocidade = 11.3
+
+velocidade = 9.6
+
+velocidade = 13.9
+
+velocidade = 15.1
+
+velocidade = 22.1
+
+velocidade = 22.2
+
+velocidade = 35.4
+
+velocidade = 33.2
+
+velocidade = 25.0
+
+velocidade = 20.5
+
+velocidade = 15.0
+
+velocidade = 16.6
+
+velocidade = 22.6
+
+velocidade = 17.7
+
+velocidade = 18.9
+
+velocidade = 21.4
+
+velocidade = 18.7
+
+velocidade = 12.7
+
+velocidade = 8.7
+
+velocidade = 20.9
+
+velocidade = 14.8
+
+velocidade = 15.9
+
+velocidade = 33.9
+
+velocidade = 27.5
+
+velocidade = 27.0
+
+velocidade = 21.2
+
+velocidade = 13.0
+
+velocidade = 21.6
+
+velocidade = 21.4
+
+velocidade = 21.1
+
+velocidade = 22.7
+
+velocidade = 18.7
+
+velocidade = 12.2
+
+velocidade = 16.4
+
+velocidade = 22.6
+
+velocidade = 10.5
+
+velocidade = 16.4
+
+velocidade = 13.1
+
+velocidade = 8.7
+
+velocidade = 15.1
+
+velocidade = 7.0
+
+velocidade = 9.0
+
+velocidade = 16.8
+
+velocidade = 15.6
+
+velocidade = 17.1
+
+velocidade = 16.7
+
+velocidade = 13.5
+
+velocidade = 19.1
+
+velocidade = 17.2
+
+velocidade = 14.5
+
+velocidade = 19.3
+
+velocidade = 20.1
+
+velocidade = 16.8
+
+velocidade = 13.9
+
+velocidade = 14.7
+
+velocidade = 19.7
+
+velocidade = 29.5
+
+velocidade = 9.7
+
+velocidade = 15.6
+
+velocidade = 15.3
+
+velocidade = 11.2
+
+velocidade = 11.9
+
+velocidade = 9.2
+
+velocidade = 19.9
+
+velocidade = 12.9
+
+velocidade = 9.7
+
+velocidade = 14.9
+
+velocidade = 11.9
+
+velocidade = 17.2
+
+velocidade = 20.6
+
+velocidade = 12.6
+
+velocidade = 7.9
+
+velocidade = 8.2
+
+velocidade = 11.2
+
+velocidade = 10.4
+
+velocidade = 10.1
+
+velocidade = 17.8
+
+velocidade = 16.2
+
+velocidade = 12.0
+
+velocidade = 15.0
+
+velocidade = 8.7
+
+velocidade = 21.3
+
+velocidade = 17.1
+
+velocidade = 21.2
+
+velocidade = 14.4
+
+velocidade = 13.0
+
+velocidade = 27.6
+
+velocidade = 24.1
+
+velocidade = 23.8
+
+velocidade = 16.1
+
+velocidade = 22.3
+
+velocidade = 21.9
+
+velocidade = 21.3
+
+velocidade = 14.6
+
+velocidade = 14.0
+
+velocidade = 5.8
+
+velocidade = 15.6
+
+velocidade = 19.2
+
+velocidade = 8.9
+
+velocidade = 17.2
+
+velocidade = 26.3
+
+velocidade = 20.5
+
+velocidade = 18.5
+
+velocidade = 13.7
+
+velocidade = 17.0
+
+velocidade = 15.2
+
+velocidade = 12.1
+
+velocidade = 13.7
+
+velocidade = 13.1
+
+velocidade = 9.2
+
+velocidade = 16.5
+
+velocidade = 8.9
+
+velocidade = 13.9
+
+velocidade = 20.2
+
+velocidade = 14.8
+
+velocidade = 8.2
+
+velocidade = 8.8
+
+velocidade = 12.7
+
+velocidade = 12.1
+
+velocidade = 11.3
+
+velocidade = 11.9
+
+velocidade = 7.6
+
+velocidade = 13.8
+
+velocidade = 10.8
+
+velocidade = 12.8
+
+velocidade = 8.9
+
+velocidade = 11.2
+
+velocidade = 8.6
+
+velocidade = 13.7
+
+velocidade = 14.9
+
+velocidade = 14.4
+
+velocidade = 12.1
+
+velocidade = 16.6
+
+velocidade = 10.6
+
+velocidade = 16.5
+
+velocidade = 16.5
+
+velocidade = 12.8
+
+velocidade = 14.2
+
+velocidade = 7.0
+
+velocidade = 13.0
+
+velocidade = 10.8
+
+velocidade = 14.1
+
+velocidade = 13.0
+
+velocidade = 10.9
+
+velocidade = 12.6
+
+velocidade = 10.5
+
+velocidade = 15.8
+
+velocidade = 12.9
+
+velocidade = 10.6
+
+velocidade = 13.0
+
+velocidade = 11.3
+
+velocidade = 13.4
+
+velocidade = 14.2
+
+velocidade = 14.0
+
+velocidade = 21.5
+
+velocidade = 17.7
+
+velocidade = 15.7
+
+velocidade = 13.7
+
+velocidade = 27.9
+
+velocidade = 31.1
+
+velocidade = 18.7
+
+velocidade = 12.1
+
+velocidade = 12.2
+
+velocidade = 13.1
+
+velocidade = 12.3
+
+velocidade = 14.1
+
+velocidade = 8.1
+
+velocidade = 11.2
+
+velocidade = 8.5
+
+velocidade = 12.0
+
+velocidade = 15.1
+
+velocidade = 14.8
+
+velocidade = 13.0
+
+velocidade = 12.0
+
+velocidade = 15.9
+
+velocidade = 11.3
+
+velocidade = 13.1
+
+velocidade = 15.6
+
+velocidade = 16.3
+
+velocidade = 13.8
+
+velocidade = 18.2
+
+velocidade = 19.5
+
+velocidade = 15.0
+
+velocidade = 18.3
+
+velocidade = 9.7
+
+velocidade = 10.8
+
+velocidade = 18.5
+
+velocidade = 18.0
+
+velocidade = 16.1
+
+velocidade = 20.2
+
+velocidade = 11.2
+
+velocidade = 17.3
+
+velocidade = 23.9
+
+velocidade = 8.9
+
+velocidade = 13.9
+
+velocidade = 12.1
+
+velocidade = 11.5
+
+velocidade = 24.3
+
+velocidade = 16.1
+
+velocidade = 13.2
+
+velocidade = 18.0
+
+velocidade = 22.5
+
+velocidade = 15.5
+
+velocidade = 13.5
+
+velocidade = 12.3
+
+velocidade = 12.7
+
+velocidade = 17.4
+
+velocidade = 19.6
+
+velocidade = 17.0
+
+velocidade = 15.1
+
+velocidade = 14.1
+
+velocidade = 20.5
+
+velocidade = 14.1
+
+velocidade = 32.8
+
+velocidade = 17.2
+
+velocidade = 18.2
+
+velocidade = 14.2
+
+velocidade = 22.5
+
+velocidade = 22.7
+
+velocidade = 24.0
+
+velocidade = 21.4
+
+velocidade = 19.9
+
+velocidade = 21.0
+
+velocidade = 8.8
+
+velocidade = 12.6
+
+velocidade = 7.1
+
+velocidade = 20.5
+
+velocidade = 13.8
+
+velocidade = 5.9
+
+velocidade = 16.1
+
+velocidade = 10.6
+
+velocidade = 18.1
+
+velocidade = 11.2
+
+velocidade = 7.7
+
+velocidade = 11.8
+
+velocidade = 14.0
+
+velocidade = 18.5
+
+velocidade = 15.5
+
+velocidade = 11.3
+
+velocidade = 13.1
+
+velocidade = 22.5
+
+velocidade = 17.7
+
+velocidade = 19.9
+
+velocidade = 18.1
+
+velocidade = 15.2
+
+velocidade = 10.1
+
+velocidade = 10.9
+
+velocidade = 13.6
+
+velocidade = 9.5
+
+velocidade = 11.6
+
+velocidade = 11.7
+
+velocidade = 21.6
+
+velocidade = 12.7
+
+velocidade = 22.7
+
+velocidade = 18.4
+
+velocidade = 16.2
+
+velocidade = 13.0
+
+velocidade = 13.0
+
+velocidade = 7.9
+
+velocidade = 18.7
+
+velocidade = 14.8
+
+velocidade = 26.2
+
+velocidade = 16.2
+
+velocidade = 14.8
+
+velocidade = 12.0
+
+velocidade = 14.7
+
+velocidade = 11.3
+
+velocidade = 14.5
+
+velocidade = 24.1
+
+velocidade = 18.3
+
+velocidade = 12.7
+
+velocidade = 16.1
+
+velocidade = 11.6
+
+velocidade = 18.4
+
+velocidade = 18.0
+
+velocidade = 24.7
+
+velocidade = 13.4
+
+velocidade = 19.0
+
+velocidade = 10.2
+
+velocidade = 12.4
+
+velocidade = 14.8
+
+velocidade = 10.0
+
+velocidade = 9.8
+
+velocidade = 13.1
+
+velocidade = 16.8
+
+velocidade = 16.9
+
+velocidade = 14.2
+
+velocidade = 20.9
+
+velocidade = 13.6
+
+velocidade = 12.0
+
+velocidade = 14.4
+
+velocidade = 12.4
+
+velocidade = 16.1
+
+velocidade = 22.3
+
+velocidade = 20.9
+
+velocidade = 19.4
+
+velocidade = 12.5
+
+velocidade = 17.7
+
+velocidade = 11.2
+
+velocidade = 16.1
+
+velocidade = 15.5
+
+velocidade = 17.0
+
+velocidade = 11.9
+
+velocidade = 16.6
+
+velocidade = 19.1
+
+velocidade = 25.5
+
+velocidade = 22.8
+
+velocidade = 14.9
+
+velocidade = 18.5
+
+velocidade = 13.7
+
+velocidade = 10.8
+
+velocidade = 13.4
+
+velocidade = 9.2
+
+velocidade = 12.9
+
+velocidade = 13.0
+
+velocidade = 12.4
+
+velocidade = 17.1
+
+velocidade = 12.2
+
+velocidade = 18.5
+
+velocidade = 15.6
+
+velocidade = 13.8
+
+velocidade = 12.2
+
+velocidade = 16.9
+
+velocidade = 18.5
+
+velocidade = 25.1
+
+velocidade = 19.3
+
+velocidade = 23.0
+
+velocidade = 18.4
+
+velocidade = 13.7
+
+velocidade = 22.6
+
+velocidade = 30.0
+
+velocidade = 26.4
+
+velocidade = 15.8
+
+velocidade = 18.1
+
+velocidade = 14.8
+
+velocidade = 17.4
+
+velocidade = 22.3
+
+velocidade = 30.9
+
+velocidade = 28.5
+
+velocidade = 22.9
+
+velocidade = 12.5
+
+velocidade = 15.9
+
+velocidade = 32.8
+
+velocidade = 25.8
+
+velocidade = 21.2
+
+velocidade = 22.4
+
+velocidade = 15.2
+
+velocidade = 18.4
+
+velocidade = 10.1
+
+velocidade = 10.9
+
+velocidade = 16.0
+
+velocidade = 12.2
+
+velocidade = 13.3
+
+velocidade = 30.4
+
+velocidade = 22.6
+
+velocidade = 27.0
+
+velocidade = 21.1
+
+velocidade = 29.8
+
+velocidade = 28.1
+
+velocidade = 21.8
+
+velocidade = 11.9
+
+velocidade = 14.7
+
+velocidade = 15.9
+
+velocidade = 13.6
+
+velocidade = 10.6
+
+velocidade = 18.5
+
+velocidade = 21.0
+
+velocidade = 16.0
+
+velocidade = 21.3
+
+velocidade = 19.9
+
+velocidade = 21.5
+
+velocidade = 17.5
+
+velocidade = 10.8
+
+velocidade = 22.1
+
+velocidade = 9.6
+
+velocidade = 18.4
+
+velocidade = 14.1
+
+velocidade = 16.8
+
+velocidade = 13.6
+
+velocidade = 11.9
+
+velocidade = 16.6
+
+velocidade = 19.9
+
+velocidade = 16.3
+
+velocidade = 11.4
+
+velocidade = 20.9
+
+velocidade = 14.3
+
+velocidade = 11.0
+
+velocidade = 16.3
+
+velocidade = 13.7
+
+velocidade = 13.1
+
+velocidade = 19.2
+
+velocidade = 15.3
+
+velocidade = 12.2
+
+velocidade = 11.1
+
+velocidade = 15.7
+
+velocidade = 10.4
+
+velocidade = 13.5
+
+velocidade = 17.1
+
+velocidade = 6.5
+
+velocidade = 16.0
+
+velocidade = 24.1
+
+velocidade = 12.3
+
+velocidade = 11.4
+
+velocidade = 26.2
+
+velocidade = 23.5
+
+velocidade = 16.5
+
+velocidade = 13.1
+
+velocidade = 14.6
+
+velocidade = 6.8
+
+velocidade = 11.9
+
+velocidade = 13.0
+
+velocidade = 12.9
+
+velocidade = 21.5
+
+velocidade = 28.5
+
+velocidade = 17.1
+
+velocidade = 10.6
+
+velocidade = 13.2
+
+velocidade = 8.2
+
+velocidade = 6.8
+
+velocidade = 14.5
+
+velocidade = 16.4
+
+velocidade = 10.5
+
+velocidade = 7.3
+
+velocidade = 10.2
+
+velocidade = 15.7
+
+velocidade = 10.5
+
+velocidade = 10.3
+
+velocidade = 4.7
+
+velocidade = 12.4
+
+velocidade = 8.7
+
+velocidade = 8.8
+
+velocidade = 16.6
+
+velocidade = 14.1
+
+velocidade = 11.9
+
+velocidade = 13.2
+
+velocidade = 19.3
+
+velocidade = 6.1
+
+velocidade = 19.5
+
+velocidade = 19.1
+
+velocidade = 16.1
+
+velocidade = 12.0
+
+velocidade = 11.0
+
+velocidade = 5.9
+
+velocidade = 15.8
+
+velocidade = 13.2
+
+velocidade = 9.5
+
+velocidade = 13.8
+
+velocidade = 16.0
+
+velocidade = 24.4
+
+velocidade = 16.8
+
+velocidade = 14.7
+
+velocidade = 10.1
+
+velocidade = 13.4
+
+velocidade = 13.3
+
+velocidade = 21.7
+
+velocidade = 16.6
+
+velocidade = 11.8
+
+velocidade = 17.3
+
+velocidade = 14.0
+
+velocidade = 14.1
+
+velocidade = 11.4
+
+velocidade = 12.7
+
+velocidade = 8.6
+
+velocidade = 13.4
+
+velocidade = 10.5
+
+velocidade = 12.7
+
+velocidade = 7.4
+
+velocidade = 17.7
+
+velocidade = 12.2
+
+velocidade = 9.3
+
+velocidade = 13.4
+
+velocidade = 21.3
+
+velocidade = 19.0
+
+velocidade = 15.2
+
+velocidade = 14.1
+
+velocidade = 17.2
+
+velocidade = 22.7
+
+velocidade = 7.9
+
+velocidade = 10.2
+
+velocidade = 10.7
+
+velocidade = 11.0
+
+velocidade = 13.8
+
+velocidade = 16.0
+
+velocidade = 15.2
+
+velocidade = 8.8
+
+velocidade = 11.8
+
+velocidade = 15.5
+
+velocidade = 7.3
+
+velocidade = 13.0
+
+velocidade = 10.2
+
+velocidade = 9.1
+
+velocidade = 15.5
+
+velocidade = 12.2
+
+velocidade = 17.1
+
+velocidade = 13.4
+
+velocidade = 21.6
+
+velocidade = 20.7
+
+velocidade = 14.2
+
+velocidade = 17.1
+
+velocidade = 9.0
+
+velocidade = 12.6
+
+velocidade = 11.4
+
+velocidade = 19.1
+
+velocidade = 16.6
+
+velocidade = 29.0
+
+velocidade = 20.3
+
+velocidade = 8.3
+
+velocidade = 10.5
+
+velocidade = 9.2
+
+velocidade = 10.9
+
+velocidade = 13.8
+
+velocidade = 14.3
+
+velocidade = 24.4
+
+velocidade = 9.2
+
+velocidade = 12.8
+
+velocidade = 20.7
+
+velocidade = 10.6
+
+velocidade = 11.6
+
+velocidade = 21.7
+
+velocidade = 9.4
+
+velocidade = 6.5
+
+velocidade = 7.8
+
+velocidade = 20.8
+
+velocidade = 17.6
+
+velocidade = 12.1
+
+velocidade = 12.2
+
+velocidade = 9.2
+
+velocidade = 14.4
+
+velocidade = 19.5
+
+velocidade = 12.7
+
+velocidade = 18.8
+
+velocidade = 12.8
+
+velocidade = 10.1
+
+velocidade = 15.6
+
+velocidade = 14.5
+
+velocidade = 15.6
+
+velocidade = 15.3
+
+velocidade = 12.2
+
+velocidade = 19.5
+
+velocidade = 20.3
+
+velocidade = 21.6
+
+velocidade = 18.0
+
+velocidade = 9.2
+
+velocidade = 8.8
+
+velocidade = 12.3
+
+velocidade = 17.6
+
+velocidade = 17.7
+
+velocidade = 19.5
+
+velocidade = 22.9
+
+velocidade = 16.6
+
+velocidade = 21.5
+
+velocidade = 12.1
+
+velocidade = 19.6
+
+velocidade = 12.5
+
+velocidade = 11.9
+
+velocidade = 16.6
+
+velocidade = 17.9
+
+velocidade = 20.7
+
+velocidade = 7.1
+
+velocidade = 20.7
+
+velocidade = 14.4
+
+velocidade = 10.2
+
+velocidade = 10.5
+
+velocidade = 19.8
+
+velocidade = 19.2
+
+velocidade = 17.5
+
+velocidade = 26.5
+
+velocidade = 17.0
+
+velocidade = 19.6
+
+velocidade = 18.5
+
+velocidade = 20.9
+
+velocidade = 12.6
+
+velocidade = 12.3
+
+velocidade = 14.4
+
+velocidade = 18.2
+
+velocidade = 12.4
+
+velocidade = 17.2
+
+velocidade = 17.3
+
+velocidade = 11.6
+
+velocidade = 17.3
+
+velocidade = 18.6
+
+velocidade = 16.9
+
+velocidade = 15.8
+
+velocidade = 25.3
+
+velocidade = 12.2
+
+velocidade = 20.0
+
+velocidade = 16.6
+
+velocidade = 13.8
+
+velocidade = 8.1
+
+velocidade = 14.8
+
+velocidade = 21.0
+
+velocidade = 17.2
+
+velocidade = 16.8
+
+velocidade = 19.9
+
+velocidade = 15.1
+
+velocidade = 21.0
+
+velocidade = 14.2
+
+velocidade = 26.0
+
+velocidade = 18.5
+
+velocidade = 16.8
+
+velocidade = 18.1
+
+velocidade = 16.5
+
+velocidade = 27.9
+
+velocidade = 17.6
+
+velocidade = 21.7
+
+velocidade = 17.2
+
+velocidade = 10.3
+
+velocidade = 17.4
+
+velocidade = 11.5
+
+velocidade = 8.9
+
+velocidade = 11.6
+
+velocidade = 16.2
+
+velocidade = 22.3
+
+velocidade = 22.7
+
+velocidade = 20.9
+
+velocidade = 15.1
+
+velocidade = 14.7
+
+velocidade = 11.5
+
+velocidade = 11.5
+
+velocidade = 12.3
+
+velocidade = 18.9
+
+velocidade = 15.3
+
+velocidade = 17.7
+
+velocidade = 21.1
+
+velocidade = 16.2

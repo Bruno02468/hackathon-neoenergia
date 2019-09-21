@@ -64,3 +64,10 @@ class Authenticator(Handler):
         "message": "Login incorreto."
       }
       resp.status = falcon.HTTP_401
+
+class Equipamentos(Handler):
+  description = "Obtém informações gerais de equipamentos."
+  usage = "GET retorna lista com informações básicas."
+
+  def on_get(self, req, resp):
+
