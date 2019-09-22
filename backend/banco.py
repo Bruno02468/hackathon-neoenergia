@@ -67,8 +67,8 @@ def equipamento(codigo):
     resultados = { **resultados, **dict(resumo_falhas) }
 
   cur = conn.cursor()
-  cur.execute("SELECT AVG(chuva.mm) AS avg_mm, AVG(vento.velosubestacao) AS "
-              "avg_velosubestacao FROM chuva, vento WHERE vento.data = chuva.data "
+  cur.execute("SELECT AVG(chuva.mm) AS avg_mm, AVG(vento.velocidade) AS "
+              "avg_velocidade FROM chuva, vento WHERE vento.data = chuva.data "
               "AND vento.subestacao = chuva.subestacao AND chuva.subestacao IN (SELECT nome "
               "FROM subestacoes WHERE sigla=?) AND chuva.data IN (SELECT SUBSTR("
               "inicio, 1, 10) FROM ocorrencias WHERE equipamento=? AND "
