@@ -36,54 +36,60 @@ def cidades():
 # dados de uma cidade pelo código
 def cidade(cod_cidade):
   cur = conn.cursor()
-  cur.execute("SELECT nome, estado FROM cidades WHERE codigo=?;")
+  cur.execute("SELECT nome, estado FROM cidades WHERE codigo=?;", (cod_cidade,))
   return cur.fetchone()
 
 # retorna uma lista geral de equipamentos
-def equipamentos_geral(cod_cidade):
+def equipamentos(cod_cidade):
+  print(cod_cidade)
   cur = conn.cursor()
   cur.execute("SELECT codigo, tipo, fase, ox, oy, clientes FROM equipamentos "
-              "WHERE SUBSTR(codigo, 1, 3)=?;", cod_cidade)
+              "WHERE SUBSTR(codigo, 1, 3)=?;", (cod_cidade,))
   return cur.fetchall()
 
 # retorna informações detalhadas sobre um equipamento e suas falhas
 def equipamento(codigo):
   cur = conn.cursor()
+  resultados = {}
   cur.execute("SELECT codigo, tipo, fase, ox, oy, clientes FROM equipamentos "
-              "WHERE codigo=?;", codigo)
-  basico = cur.fetchall()
+              "WHERE codigo=?;", (codigo,))
+  basico = cur.fetchone()
   if not basico:
     return None
+  resultados = { **dict(basico) }
 
   cur = conn.cursor()
   cur.execute("SELECT COUNT(*) AS falhas, AVG(chi) AS avg_chi, AVG(ci) AS "
-              "avg_ci FROM ocorrencias WHERE equipamento=?;" codigo)
+              "avg_ci FROM ocorrencias WHERE equipamento=?;", (codigo,))
   resumo_falhas = cur.fetchone()
-  basico.update(resumo_falhas)
+  if resumo_falhas:
+    resultados = { **resultados, **dict(resumo_falhas) }
 
   cur = conn.cursor()
   cur.execute("SELECT AVG(chuva.mm) AS avg_mm, AVG(vento.velocidade) AS "
-              "avg_velocidade FROM chuvas, vento WHERE vento.data = chuva.data "
+              "avg_velocidade FROM chuva, vento WHERE vento.data = chuva.data "
               "AND vento.cidade = chuva.cidade AND chuva.cidade IN (SELECT nome "
               "FROM cidades WHERE codigo=?) AND chuva.data IN (SELECT SUBSTR("
               "inicio, 1, 10) FROM ocorrencias WHERE equipamento=? AND "
-              "DESCRICAO LIKE \"%AMBI%\");")
+              "DESCRICAO LIKE \"%AMBI%\");", (codigo, codigo))
   falhas_clima = cur.fetchone()
-  basico.update(falhas_clima)
+  if falhas_clima:
+    resultados = { **resultados, **dict(falhas_clima) }
 
   cur = conn.cursor()
-  cur.execute("SELECT nome AS nome_tipo, subtipo FROM unidades WHERE sigla=?;",
-              basico["codigo"])
+  cur.execute("SELECT nome AS tipo, subtipo FROM unidades WHERE sigla=?;",
+              (resultados["tipo"],))
   detalhes_tipo = cur.fetchone()
-  basico.update(detalhes_tipo)
+  if detalhes_tipo:
+    resultados = { **resultados, **dict(detalhes_tipo) }
 
-  return basico
+  return resultados
 
 # retorna um histórico de ocorrências para uma cidade num dado ano
 def ocorrencias(cod_cidade, ano):
   cur = conn.cursor()
   cur.execute("SELECT * FROM ocorrencias WHERE SUBSTR(equipamento, 1, 3)=? AND "
-              "SUBSTR(inicio, 1, 4)=?;", cod_cidade, str(ano))
+              "SUBSTR(inicio, 1, 4)=?;", (cod_cidade, str(ano)))
   return cur.fetchall()
 
 # retorna a lista de unidades, com siglas e subtipos
@@ -100,26 +106,27 @@ def relacao_rc(cod_cidade):
   cur.execute("SELECT equipamento, COUNT(*) AS ambientais FROM ocorrencias "
               "WHERE DESCRICAO LIKE \"%AMBI%\""
               "AND SUBSTR(equipamento, 1, 3)=? GROUP BY equipamento;",
-              cod_cidade)
+              (cod_cidade,))
   ambientais = cur.fetchall()
   # agora, obter todas as falhas
   cur = conn.cursor()
   cur.execute("SELECT equipamento, COUNT(*) AS totais FROM ocorrencias "
               "WHERE SUBSTR(equipamento, 1, 3)=? GROUP BY equipamento;",
-              cod_cidade)
+              (cod_cidade,))
   totais = cur.fetchall()
   # calcular taxas de risco climatológico
   relacao = {}
   for linha in totais:
     relacao[linha["equipamento"]] = {
-      "totais": linha["totais"]
-      "ambientais": 0
+      "totais": linha["totais"],
+      "ambientais": 0,
       "taxa": 0
     }
   for linha in ambientais:
-    relacao[linha[equipamento]]["ambientais"] = linha["ambientais"]
-    denom = relacao[linha[equipamento]]["totais"]
+    cod = linha["equipamento"]
+    relacao[cod]["ambientais"] = linha["ambientais"]
+    denom = relacao[cod]["totais"]
     if denom:
-      relacao[linha[equipamento]]["taxa"] = linhas["ambientais"]/denom
+      relacao[cod]["taxa"] = linha["ambientais"]/denom
 
   return relacao
