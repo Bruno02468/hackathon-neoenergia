@@ -46,22 +46,22 @@ class Help(Handler):
     resp.media = self.instances
 
 
-class Cidades(Handler):
-  description = "Lista cidades e códigos de cidade"
+class Subestacoes(Handler):
+  description = "Lista subestações, códigos e suas subestacoes."
   usage = "GET retorna a lista."
-  route = "/cidades"
+  route = "/subestacoes"
 
   def on_get(self, req, resp):
-    resp.media = rows2dicts(self.db.cidades());
+    resp.media = rows2dicts(self.db.subestacoes());
 
 
 class Equipamentos(Handler):
   description = "Obtém informações gerais de equipamentos."
   usage = "GET retorna lista com informações básicas."
-  route = "/equipamentos/{cod_cidade}"
+  route = "/equipamentos/{cod_subestacao}"
 
-  def on_get(self, req, resp, cod_cidade):
-    resultados = self.db.equipamentos(cod_cidade)
+  def on_get(self, req, resp, cod_subestacao):
+    resultados = self.db.equipamentos(cod_subestacao)
     if resultados:
       resp.media = rows2dicts(resultados)
     else:
@@ -82,12 +82,12 @@ class Equipamento(Handler):
 
 
 class Ocorrencias(Handler):
-  description = "Retorna todas as ocorrências numa cidade e ano"
-  usage = "GET com código de cidade e ano retorna a lista"
-  route = "/ocorrencias/{cod_cidade}/{ano}"
+  description = "Retorna todas as ocorrências numa subestacao e ano"
+  usage = "GET com código de subestacao e ano retorna a lista"
+  route = "/ocorrencias/{cod_subestacao}/{ano}"
 
-  def on_get(self, req, resp, cod_cidade, ano):
-    resultados = self.db.ocorrencias(cod_cidade, ano)
+  def on_get(self, req, resp, cod_subestacao, ano):
+    resultados = self.db.ocorrencias(cod_subestacao, ano)
     if resultados:
       resp.media = rows2dicts(resultados)
     else:
@@ -104,45 +104,45 @@ class Unidades(Handler):
 
 
 class PreverTempo(Handler):
-  description = "Obter a previsão do tempo para uma cidade."
-  usage = "GET com código de cidade retorna os dados de previsão."
-  route = "/forecast/{cod_cidade}"
+  description = "Obter a previsão do tempo para uma subestacao."
+  usage = "GET com código de subestacao retorna os dados de previsão."
+  route = "/forecast/{cod_subestacao}"
 
-  def on_get(self, req, resp, cod_cidade):
-    cidade = self.db.cidade(cod_cidade)
-    if not cidade:
+  def on_get(self, req, resp, cod_subestacao):
+    subestacao = self.db.subestacao(cod_subestacao)
+    if not subestacao:
       resp.status = falcon.HTTP_404
     else:
-      resp.media = hg.get_previsao(cidade["nome"], cidade["estado"])
+      resp.media = hg.get_previsao(subestacao["cidade"])
 
 
 class RiscoClimatologico(Handler):
   description = ("Obter a relação de risco climatológico dos equipamentos numa "
-                 "cidade por código.")
-  usage = "GET com código de cidade retorna os dados."
-  route = "/risco_climatologico/{cod_cidade}"
+                 "subestacao por código.")
+  usage = "GET com código de subestacao retorna os dados."
+  route = "/risco_climatologico/{cod_subestacao}"
 
-  def on_get(self, req, resp, cod_cidade):
-    cidade = self.db.cidade(cod_cidade)
-    if not cidade:
+  def on_get(self, req, resp, cod_subestacao):
+    subestacao = self.db.subestacao(cod_subestacao)
+    if not subestacao:
       resp.status = falcon.HTTP_404
     else:
-      resp.media = self.db.relacao_rc(cod_cidade)
+      resp.media = self.db.relacao_rc(cod_subestacao)
 
 
 class PreverRiscos(Handler):
-  description = ("Obter a lista de equipamentos numa cidade que podem estar "
+  description = ("Obter a lista de equipamentos numa subestacao que podem estar "
                  "sujeitos a falha de origem climatológica nos próximos dias.")
-  usage = "GET com código de cidade retorna os dados."
-  route = "/prever_risco/{cod_cidade}"
+  usage = "GET com código de subestacao retorna os dados."
+  route = "/prever_risco/{cod_subestacao}"
 
-  def on_get(self, req, resp, cod_cidade):
-    cidade = self.db.cidade(cod_cidade)
-    if not cidade:
+  def on_get(self, req, resp, cod_subestacao):
+    subestacao = self.db.subestacao(cod_subestacao)
+    if not subestacao:
       resp.status = falcon.HTTP_404
       return
-    prev = hg.get_previsao(cidade["nome"], cidade["estado"])
-    rc = self.db.relacao_rc(cod_cidade)
+    prev = hg.get_previsao(subestacao["cidade"])
+    rc = self.db.relacao_rc(cod_subestacao)
     dias = {}
     forecast = prev["results"]["forecast"]
     for f in forecast:

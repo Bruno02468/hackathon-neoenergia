@@ -27,24 +27,25 @@ conn.row_factory = sqlite3.Row
 
 logging.info("Conexão ao banco estabelecida.")
 
-# retorna a lista de cidades e códigos disponíveis
-def cidades():
+# retorna a lista de subestações e códigos disponíveis
+def subestacoes():
   cur = conn.cursor()
-  cur.execute("SELECT nome, codigo, estado FROM cidades;")
+  cur.execute("SELECT nome, sigla, cidade FROM subestacoes;")
   return cur.fetchall()
 
-# dados de uma cidade pelo código
-def cidade(cod_cidade):
+# dados de uma subestacao pelo código
+def subestacao(cod_subestacao):
   cur = conn.cursor()
-  cur.execute("SELECT nome, estado FROM cidades WHERE codigo=?;", (cod_cidade,))
+  cur.execute("SELECT nome, cidade FROM subestacoes WHERE sigla=?;",
+              (cod_subestacao,))
   return cur.fetchone()
 
 # retorna uma lista geral de equipamentos
-def equipamentos(cod_cidade):
-  print(cod_cidade)
+def equipamentos(cod_subestacao):
+  print(cod_subestacao)
   cur = conn.cursor()
   cur.execute("SELECT codigo, tipo, fase, ox, oy, clientes FROM equipamentos "
-              "WHERE SUBSTR(codigo, 1, 3)=?;", (cod_cidade,))
+              "WHERE SUBSTR(codigo, 1, 3)=?;", (cod_subestacao,))
   return cur.fetchall()
 
 # retorna informações detalhadas sobre um equipamento e suas falhas
@@ -66,10 +67,10 @@ def equipamento(codigo):
     resultados = { **resultados, **dict(resumo_falhas) }
 
   cur = conn.cursor()
-  cur.execute("SELECT AVG(chuva.mm) AS avg_mm, AVG(vento.velocidade) AS "
-              "avg_velocidade FROM chuva, vento WHERE vento.data = chuva.data "
-              "AND vento.cidade = chuva.cidade AND chuva.cidade IN (SELECT nome "
-              "FROM cidades WHERE codigo=?) AND chuva.data IN (SELECT SUBSTR("
+  cur.execute("SELECT AVG(chuva.mm) AS avg_mm, AVG(vento.velosubestacao) AS "
+              "avg_velosubestacao FROM chuva, vento WHERE vento.data = chuva.data "
+              "AND vento.subestacao = chuva.subestacao AND chuva.subestacao IN (SELECT nome "
+              "FROM subestacoes WHERE sigla=?) AND chuva.data IN (SELECT SUBSTR("
               "inicio, 1, 10) FROM ocorrencias WHERE equipamento=? AND "
               "DESCRICAO LIKE \"%AMBI%\");", (codigo, codigo))
   falhas_clima = cur.fetchone()
@@ -85,11 +86,11 @@ def equipamento(codigo):
 
   return resultados
 
-# retorna um histórico de ocorrências para uma cidade num dado ano
-def ocorrencias(cod_cidade, ano):
+# retorna um histórico de ocorrências para uma subestacao num dado ano
+def ocorrencias(cod_subestacao, ano):
   cur = conn.cursor()
   cur.execute("SELECT * FROM ocorrencias WHERE SUBSTR(equipamento, 1, 3)=? AND "
-              "SUBSTR(inicio, 1, 4)=?;", (cod_cidade, str(ano)))
+              "SUBSTR(inicio, 1, 4)=?;", (cod_subestacao, str(ano)))
   return cur.fetchall()
 
 # retorna a lista de unidades, com siglas e subtipos
@@ -100,19 +101,19 @@ def unidades():
 
 # retorna uma lista de equipamentos com seus números de falhas totais e
 # ambientais, usada para estimar o risco climatológico
-def relacao_rc(cod_cidade):
+def relacao_rc(cod_subestacao):
   # primeiro, obter as falhas do equipamento envolvendo meio ambiente
   cur = conn.cursor()
   cur.execute("SELECT equipamento, COUNT(*) AS ambientais FROM ocorrencias "
               "WHERE DESCRICAO LIKE \"%AMBI%\""
               "AND SUBSTR(equipamento, 1, 3)=? GROUP BY equipamento;",
-              (cod_cidade,))
+              (cod_subestacao,))
   ambientais = cur.fetchall()
   # agora, obter todas as falhas
   cur = conn.cursor()
   cur.execute("SELECT equipamento, COUNT(*) AS totais FROM ocorrencias "
               "WHERE SUBSTR(equipamento, 1, 3)=? GROUP BY equipamento;",
-              (cod_cidade,))
+              (cod_subestacao,))
   totais = cur.fetchall()
   # calcular taxas de risco climatológico
   relacao = {}

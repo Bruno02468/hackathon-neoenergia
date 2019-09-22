@@ -4,12 +4,13 @@
 
 import consts as cs
 from urllib.request import Request, urlopen
+from urllib.parse import quote
 import json
 import sys
 
-def get_previsao(nome_cidade, estado):
-  url = ("https://api.hgbrasil.com/weather?key=%s&city_name=%s,%s"
-         % (cs.HG_API_KEY, nome_cidade, estado))
+def get_previsao(nome_cidade):
+  url = ("https://api.hgbrasil.com/weather?key=%s&city_name=%s"
+         % (cs.HG_API_KEY, quote(nome_cidade)))
   headers = {"User-Agent": ()}
   r = Request(url)
   r.add_header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) "

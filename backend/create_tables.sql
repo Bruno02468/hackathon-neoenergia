@@ -5,11 +5,11 @@ CREATE TABLE "chuva" (
 	"mm"	REAL NOT NULL
 );
 
-CREATE TABLE "cidades" (
-	"id_cidade"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	"nome"	TEXT NOT NULL UNIQUE,
-	"codigo"	TEXT NOT NULL UNIQUE,
-	"estado"	TEXT NOT NULL DEFAULT 'SP'
+CREATE TABLE "subestacoes" (
+	"id_subestacao"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"sigla"	TEXT UNIQUE,
+	"nome"	TEXT UNIQUE,
+	"cidade"	TEXT
 );
 
 CREATE TABLE "equipamentos" (
