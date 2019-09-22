@@ -43,8 +43,8 @@ def make_api():
   try:
     import falcon
   except:
-    logging.critical("O módulo Falcon precisa estar instalado, execute \""
-                     "pip3 install falcon\" para continuar.")
+    logging.critical("O módulo Falcon precisa estar instalado, execute \"pip3 "
+                     "install falcon\" para continuar.")
     sys.exit(0)
 
   # inicializar uma instância do banco de dados e a API
