@@ -7,6 +7,9 @@ import Map from 'containers/Map';
 import ListWrapper from 'containers/ListsContainer';
 import CitySelector from 'containers/CitySelector';
 import ViewToggle from 'containers/ViewToggle';
+import DetailsCardContainer from 'containers/DetailsCardContainer';
+import { fetchCities } from 'state/citiesState';
+import { fetchEquipments } from 'state/equipmentsState';
 
 const AppContainer = styled.div`
   ${fillContainer};
@@ -15,15 +18,14 @@ const AppContainer = styled.div`
   display: grid;
   grid-template-columns: 300px 1fr;
   font-family: ${fontPrimary};
+  overflow: hidden;
 `;
 
 // TODO: Login
 
 const App = () => {
-  // const [activeTab] = appState.useStore('activeTab');
-
   useEffect(() => {
-
+    fetchCities();
   }, []);
 
   return (
@@ -34,7 +36,7 @@ const App = () => {
         <ListWrapper />
         <CitySelector />
         <ViewToggle />
-        {/* details card */}
+        <DetailsCardContainer />
       </div>
     </AppContainer>
   );

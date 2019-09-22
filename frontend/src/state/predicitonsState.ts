@@ -1,29 +1,34 @@
 import { createStore } from 'hookstated';
+import appState from 'state/appState';
 
 type predicitonsState = {
+  selected: null | number;
   predicitons: {
     lngLat: [number, number];
-    type: 'priority' | 'warn';
+    risco: string;
+    equipment: string;
+    codigo: string;
+    data: string;
+    clima: string;
   }[];
 };
 
 const predicitonsState = createStore<predicitonsState>('predictions', {
   state: {
+    selected: null,
     predicitons: [],
   },
 });
 
-setTimeout(() => {
-  predicitonsState.setKey('predicitons', [
-    {
-      lngLat: [-48.020731, -22.470567],
-      type: 'warn',
-    },
-    {
-      lngLat: [-47.901815, -22.703772],
-      type: 'priority',
-    },
-  ]);
-}, 1000);
+export function showPredictionCard(id: number) {
+  appState.setKey('viewUsedBeforeShowCard', appState.getState().activeView);
+  appState.setKey('activeView', 'map');
+  predicitonsState.setKey('selected', id);
+}
+
+export function closePredictionCard() {
+  appState.setKey('activeView', appState.getState().viewUsedBeforeShowCard);
+  predicitonsState.setKey('selected', null);
+}
 
 export default predicitonsState;

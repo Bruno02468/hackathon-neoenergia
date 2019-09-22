@@ -15,8 +15,6 @@ module.exports = {
 
   entry: {
     main: './src/index.tsx',
-    CCAEList: './src/data/CCAE.json',
-    oxfordWordList: './src/data/oxford3000-5000.json',
   },
 
   output: {
@@ -129,27 +127,6 @@ module.exports = {
         minifyJS: true,
         minifyCSS: true,
         minifyURLs: true,
-      },
-    }),
-    new FaviconsWebpackPlugin({
-      logo: './src/assets/logo.png',
-      // favicons: {
-      appName: 'Phrasebook',
-      prefix: 'icons/',
-      appDescription: 'Phrasebook App',
-      theme_color: '#f8f8f8',
-      start_url: '.',
-      persistentCache: false,
-      // },
-      icons: {
-        android: true, // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-        appleIcon: true, // Create Apple touch icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-        appleStartup: true, // Create Apple startup images. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-        coast: false, // Create Opera Coast icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-        favicons: true, // Create regular favicons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-        firefox: false, // Create Firefox OS icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-        windows: true, // Create Windows 8 tile icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
-        yandex: false,
       },
     }),
     new webpack.DefinePlugin({

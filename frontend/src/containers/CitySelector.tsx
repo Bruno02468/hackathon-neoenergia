@@ -5,6 +5,7 @@ import { centerContent } from 'style/modifiers';
 import { colorPrimary, colorBg } from 'style/theme';
 import Icon from 'components/Icon';
 import { useOnClickOutside } from '@lucasols/utils';
+import citiesState from 'state/citiesState';
 
 const Container = styled.div`
   ${centerContent};
@@ -53,11 +54,11 @@ const title = {
   occurrences: 'Ocorrências em ',
 };
 
-const fakeData = ['Atibaia', 'test', 'São Paulo', 'Teste'];
-
 const CitySelector = () => {
   const [activeSection] = appState.useStore('activeSection');
   const [activeView] = appState.useStore('activeView');
+  const [cities] = citiesState.useStore('cities');
+  const [selectedCityId, setSelectedCityId] = citiesState.useStore('selected');
   const [isOpen, setIsOpen] = useState(false);
   const selectRef = useRef(null);
 
@@ -65,29 +66,44 @@ const CitySelector = () => {
     setIsOpen(false);
   });
 
+  function onChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    setSelectedCityId(event.target.value);
+  }
+
   return (
     <Container
       style={{ background: activeView === 'map' ? '#fff' : undefined }}
     >
-      <label htmlFor="city-select">{title[activeSection]}</label>
-      <Select
-        ref={selectRef}
-        id="city-select"
-        style={{ background: activeView === 'map' ? colorBg : undefined }}
-        onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
-      >
-        <option value="all">todas as cidades</option>
-        {fakeData.map(item => (
-          <option value={item} key={item}>
-            {item}
-          </option>
-        ))}
-      </Select>
-      <Arrow
-        name="arrow-down"
-        size={20}
-        css={{ transform: isOpen ? 'rotate(180deg)' : undefined }}
-      />
+      <label htmlFor="city-select">
+        {cities === null ? 'Carregando cidades...' : title[activeSection]}
+      </label>
+      {cities !== null && (
+        <>
+          <Select
+            ref={selectRef}
+            id="city-select"
+            style={{ background: activeView === 'map' ? colorBg : undefined }}
+            onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+            onChange={onChange}
+            value={selectedCityId}
+          >
+            {cities === null && <option value="all">...</option>}
+            {cities.map((item, i) => (
+              <option
+                value={item.sigla}
+                key={i}
+              >
+                {item.nome}
+              </option>
+            ))}
+          </Select>
+          <Arrow
+            name="arrow-down"
+            size={20}
+            css={{ transform: isOpen ? 'rotate(180deg)' : undefined }}
+          />
+        </>
+      )}
     </Container>
   );
 };

@@ -4,6 +4,8 @@ import Icon from 'components/Icon';
 import { centerContent } from 'style/modifiers';
 import appState from 'state/appState';
 import { colorGradient } from 'style/theme';
+import predicitonsState from 'state/predicitonsState';
+import equipmentsState from 'state/equipmentsState';
 
 const Container = styled.div`
   ${centerContent};
@@ -45,6 +47,12 @@ const ViewToggle = () => {
   const [activeView, setActiveView] = appState.useStore('activeView');
   const mapIsActive = activeView === 'map';
 
+  function onClickList() {
+    predicitonsState.setKey('selected', null);
+    equipmentsState.setKey('selected', null);
+    setActiveView('list');
+  }
+
   return (
     <Container>
       <ActiveViewBg
@@ -59,7 +67,7 @@ const ViewToggle = () => {
           color: mapIsActive ? '#000' : '#fff',
           pointerEvents: !mapIsActive ? 'none' : undefined,
         }}
-        onClick={() => setActiveView('list')}
+        onClick={onClickList}
       >
         <Icon name="list" size={18} color={mapIsActive ? '#000' : '#fff'} />
         <span>Lista</span>
