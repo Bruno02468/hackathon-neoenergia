@@ -1,10 +1,10 @@
 import { css } from '@emotion/core';
-import { tint, lighten } from 'polished';
-import { colorSecondary } from 'style/theme';
 import { rgba } from '@lucasols/utils';
+import { lighten } from 'polished';
+import { colorPrimary } from 'style/theme';
 
-const background = lighten(0.16, colorSecondary);
-const thumb = colorSecondary;
+const background = '#eee';
+const thumb = colorPrimary;
 
 export default css`
   ::-webkit-scrollbar {

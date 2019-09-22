@@ -13,11 +13,12 @@ export type Icons = keyof typeof iconsSet;
 
 type Icon = {
   name: Icons;
+  className?: string;
   color?: string;
   size?: number;
 };
 
-const Icon = ({ name, color = colorPrimary, size = 24 }: Icon) => {
+const Icon = ({ name, className, color = colorPrimary, size = 24 }: Icon) => {
   if (__DEV__ && !iconsSet[name]) throw new Error(`Icon ${name} do not exists`);
 
   const { viewBox, paths }: JsonIcon = iconsSet[name];
@@ -29,7 +30,7 @@ const Icon = ({ name, color = colorPrimary, size = 24 }: Icon) => {
         width: size,
         fill: color,
       }}
-      className="icon"
+      className={className}
       viewBox={viewBox}
     >
       {paths &&

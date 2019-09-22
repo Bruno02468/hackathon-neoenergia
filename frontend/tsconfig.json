@@ -2,33 +2,31 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "esnext",
-    "module": "es6",       // specify module code generation
     "moduleResolution": "node",
-    "jsx": "react",             // use typescript to transpile jsx to js
-    "allowJs": true,            // allow a partial TypeScript and JavaScript codebase
-    "strictNullChecks": true,   // enable strict null checks as a best practice
+    "jsx": "preserve",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "noEmit": true,
+    "strictNullChecks": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    // "noUnusedLocals": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "noEmit": true,
     "keyofStringsOnly": true,
-    "skipLibCheck": true,
-
-    "baseUrl": ".", // This must be specified if "paths" is set
     "paths": {
       "*": [
         "src/*",
         "*"
       ]
-    }
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
   },
-  "exclude": [
-    "docs",
-    "dist",
-    "resources",
-    "node_modules",
-    "**/node_modules/*"
+  "include": [
+    "src"
   ]
 }

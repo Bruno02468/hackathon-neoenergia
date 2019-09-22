@@ -5,6 +5,7 @@ import normalize from './normalize';
 import { fontPrimary, colorSecondary } from './theme';
 import { fillContainer } from './modifiers';
 import { rgba } from '@lucasols/utils';
+import scrollBar from 'style/scrollBar';
 
 const reset = css`
   *,
@@ -37,6 +38,6 @@ const reset = css`
   }
 `;
 
-const GlobalStyle = () => <Global styles={[normalize, reset]} />;
+const GlobalStyle = () => <Global styles={[normalize, reset, scrollBar]} />;
 
 export default GlobalStyle;
