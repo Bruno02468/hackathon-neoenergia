@@ -1,56 +1,55 @@
-import React from 'react';
+/* eslint-disable indent */
+/* eslint-disable react/jsx-indent */
+import React, { useEffect } from 'react';
 import TableWrapper from 'components/TableStyle';
-
-const fakeData = [
-  {
-    equipment: 'PET03257',
-    region: 'Oeste',
-    causes: 'ACIDENTAL / REDE PRIMÁRIA / OUTRAS CAUSAS',
-    risk: 'alto',
-    predictionDate: '24/09/19',
-  },
-];
-
-const repeatedFakeData = [
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-  ...fakeData,
-];
+import equipmentsState, { showEquipmentCard } from 'state/equipmentsState';
+import citiesState, { getCity } from 'state/citiesState';
+import axios from 'axios';
+import { apiUrl } from 'utils/apiUrl';
 
 const EquipmentsList = () => {
+  const [data, setData] = equipmentsState.useStore('equipments');
+  const [selectedCityId] = citiesState.useStore('selected');
+  const selectedCity = getCity(selectedCityId);
+
+  useEffect(() => {
+    if (selectedCity === 'all' || !selectedCity) return;
+
+    axios
+      .get<equipmentsState['equipments']>(
+        `${apiUrl}equipamentos/${selectedCity.sigla}`,
+      )
+      .then(response => {
+        if (response.data) {
+          setData(response.data);
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, [selectedCityId]);
+
   return (
     <TableWrapper>
       <thead>
         <tr>
-          <th>Equipamento</th>
-          <th>Região</th>
-          <th>Causas</th>
-          <th>Risco</th>
-          <th>Data da Previsão</th>
+          <th>Código</th>
+          <th>Tipo</th>
+          <th>Fase</th>
+          <th>Clientes</th>
         </tr>
       </thead>
       <tbody>
-        {repeatedFakeData.map((item, i) => (
-          <tr key={i}>
-            <td>{item.equipment}</td>
-            <td>{item.region}</td>
-            <td>{item.causes}</td>
-            <td>{item.risk}</td>
-            <td>{item.predictionDate}</td>
-          </tr>
-        ))}
+        {data === null
+          ? 'carregando equipamentos...'
+          : data.map(item => (
+              <tr key={item.codigo} onClick={() => showEquipmentCard(item.sigla)}>
+                <td>{item.codigo}</td>
+                <td>{item.tipo}</td>
+                <td>{item.fase}</td>
+                <td>{item.clientes}</td>
+              </tr>
+            ))}
       </tbody>
     </TableWrapper>
   );

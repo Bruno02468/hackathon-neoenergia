@@ -4,6 +4,8 @@ import React from 'react';
 import { circle, letterSpacing } from 'style/helpers';
 import { colorPrimary } from 'style/theme';
 import appState from 'state/appState';
+import predicitonsState from 'state/predicitonsState';
+import equipmentsState from 'state/equipmentsState';
 
 const Container = styled.div`
   background: #fff;
@@ -11,7 +13,7 @@ const Container = styled.div`
   display: flex;
   z-index: 1;
   flex-direction: column;
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Logo = styled.div`
@@ -48,6 +50,22 @@ const Avatar = styled.div`
 const SideNav = () => {
   const [activeSection, setActiveSection] = appState.useStore('activeSection');
 
+  function setSection(section: appState['activeSection']) {
+    setActiveSection(section);
+    if (
+      predicitonsState.getState().selected !== null
+      || equipmentsState.getState().selected !== null
+    ) {
+      appState.setKey('activeView', appState.getState().viewUsedBeforeShowCard);
+    }
+
+    if (activeSection === 'prediction') {
+      predicitonsState.setKey('selected', null);
+    } else if (activeSection === 'equipments') {
+      equipmentsState.setKey('selected', null);
+    }
+  }
+
   return (
     <Container>
       <Logo />
@@ -57,20 +75,20 @@ const SideNav = () => {
           icon="prediction"
           label="Previsão de Ocorrências"
           isActive={activeSection === 'prediction'}
-          onClick={() => setActiveSection('prediction')}
+          onClick={() => setSection('prediction')}
         />
         <NavItem
           icon="equipments"
           label="Equipamentos"
           isActive={activeSection === 'equipments'}
-          onClick={() => setActiveSection('equipments')}
+          onClick={() => setSection('equipments')}
         />
-        <NavItem
+        {/* <NavItem
           icon="error-outline"
           label="Ocorrências"
           isActive={activeSection === 'occurrences'}
-          onClick={() => setActiveSection('occurrences')}
-        />
+          onClick={() => setSection('occurrences')}
+        /> */}
       </Nav>
 
       <NavItem label="Vitor Ribeiro" alignBottom>

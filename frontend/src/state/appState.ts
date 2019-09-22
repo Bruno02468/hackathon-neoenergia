@@ -1,9 +1,12 @@
 import { createStore } from 'hookstated';
 
+type Views = 'list' | 'map';
+
 type appState = {
   activeSection: 'prediction' | 'equipments' | 'occurrences';
   activeCity: string;
-  activeView: 'list' | 'map';
+  activeView: Views;
+  viewUsedBeforeShowCard: Views;
 };
 
 const appState = createStore<appState>('app', {
@@ -11,6 +14,7 @@ const appState = createStore<appState>('app', {
     activeSection: 'prediction',
     activeCity: 'all',
     activeView: 'list',
+    viewUsedBeforeShowCard: 'list',
   },
 });
 

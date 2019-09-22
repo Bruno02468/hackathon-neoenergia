@@ -5,6 +5,7 @@ import { fillContainer } from 'style/modifiers';
 
 const Container = styled.div`
   ${fillContainer};
+  z-index: 0;
 `;
 
 const Map = () => {
