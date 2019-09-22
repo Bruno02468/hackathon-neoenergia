@@ -3,26 +3,30 @@ import CardInfo from 'components/CardInfo';
 import { CardContainerStyle } from '../components/CardContainerStyle';
 import predicitonsState, { closePredictionCard } from 'state/predicitonsState';
 import CardCloseButton from 'components/CardCloseButton';
+import equipmentsState from 'state/equipmentsState';
 
 // TODO: zoom to card on map
 
 const PredictionCard = () => {
   const [selected] = predicitonsState.useStore('selected');
   const [predicitons] = predicitonsState.useStore('predicitons');
+  const [equipments] = equipmentsState.useStore('equipments');
 
   if (selected === null) return null;
 
   const prediction = predicitons[selected];
+
+  const relEquipment = equipments && equipments.find(item => item.codigo === equipment);
 
   return (
     <CardContainerStyle>
       <CardCloseButton onClick={() => closePredictionCard()} />
 
       <CardInfo label="Risco">
-        {prediction.type}
+        {relEquipment && relEquipment.type}
       </CardInfo>
       <CardInfo label="Equipamento">
-        {prediction.equipment}
+        {relEquipment.equipment}
       </CardInfo>
       <CardInfo label="Região">
 

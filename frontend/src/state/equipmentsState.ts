@@ -22,7 +22,7 @@ const equipmentsState = createStore<equipmentsState>('equipments', {
   },
 });
 
-export function showEquipmentCard(id: number) {
+export function showEquipmentCard(id: string) {
   appState.setKey('viewUsedBeforeShowCard', appState.getState().activeView);
   appState.setKey('activeView', 'map');
   equipmentsState.setKey('selected', id);

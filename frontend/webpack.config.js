@@ -8,7 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const folder = './docs';
+const folder = './dist';
 
 module.exports = {
   mode: 'production',

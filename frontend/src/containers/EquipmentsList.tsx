@@ -43,7 +43,7 @@ const EquipmentsList = () => {
         {data === null
           ? 'carregando equipamentos...'
           : data.map(item => (
-              <tr key={item.codigo} onClick={() => showEquipmentCard(item.sigla)}>
+              <tr key={item.codigo} onClick={() => showEquipmentCard(item.codigo)}>
                 <td>{item.codigo}</td>
                 <td>{item.tipo}</td>
                 <td>{item.fase}</td>

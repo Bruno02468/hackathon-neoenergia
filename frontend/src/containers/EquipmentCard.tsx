@@ -9,19 +9,19 @@ const EquipmentCard = () => {
   return (
     <CardContainerStyle>
       <CardInfo label="Risco">
-
+        ALTO
       </CardInfo>
       <CardInfo label="Equipamento">
-
+        AGV01826
       </CardInfo>
-      <CardInfo label="Região">
-
+      <CardInfo label="Tipo">
+        CC
       </CardInfo>
-      <CardInfo label="Causas">
-
+      <CardInfo label="Fase">
+        ABC
       </CardInfo>
-      <CardInfo label="Data da Previsão">
-
+      <CardInfo label="Clientes">
+        1200
       </CardInfo>
     </CardContainerStyle>
   );
