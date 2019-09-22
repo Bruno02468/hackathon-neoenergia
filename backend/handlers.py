@@ -65,7 +65,7 @@ class Equipamentos(Handler):
     if resultados:
       resp.media = rows2dicts(resultados)
     else:
-      resp.status = falton.HTTP_404
+      resp.status = falcon.HTTP_404
 
 
 class Equipamento(Handler):
@@ -78,7 +78,7 @@ class Equipamento(Handler):
     if resultados:
       resp.media = dict(resultados)
     else:
-      resp.status = falton.HTTP_404
+      resp.status = falcon.HTTP_404
 
 
 class Ocorrencias(Handler):
@@ -91,7 +91,7 @@ class Ocorrencias(Handler):
     if resultados:
       resp.media = rows2dicts(resultados)
     else:
-      resp.status = falton.HTTP_404
+      resp.status = falcon.HTTP_404
 
 
 class Unidades(Handler):
