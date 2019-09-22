@@ -4,7 +4,7 @@ import css from '@emotion/css';
 /* colors hex */
 export const colorPrimary = '#10642A';
 export const colorSecondary = '#E5FBDA';
-export const colorBg = '#F9FBF5';
+export const colorBg = '#F5F8ED';
 export const colorError = '#DA1E28';
 export const colorWarning = '#FDD13A';
 
@@ -30,7 +30,7 @@ export const textGradient = css`
 `;
 
 /* fonts */
-export const fontPrimary = 'Lato, sans-serif';
+export const fontPrimary = 'Open Sans, sans-serif';
 export const fontDecorative = 'Source Code Pro, sans-serif';
 export const fontSecondary = 'Source Sans Pro, sans-serif';
 

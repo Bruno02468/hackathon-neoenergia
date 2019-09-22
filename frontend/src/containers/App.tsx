@@ -3,13 +3,17 @@ import React, { useEffect } from 'react';
 import { fillContainer } from 'style/modifiers';
 import { colorBg, fontPrimary } from 'style/theme';
 import SideNav from 'containers/SideNav';
+import Map from 'containers/Map';
+import ListWrapper from 'containers/ListsContainer';
+import CitySelector from 'containers/CitySelector';
+import ViewToggle from 'containers/ViewToggle';
 
 const AppContainer = styled.div`
   ${fillContainer};
 
   background: ${colorBg};
   display: grid;
-  grid-template-columns: 356px 1fr;
+  grid-template-columns: 300px 1fr;
   font-family: ${fontPrimary};
 `;
 
@@ -25,9 +29,11 @@ const App = () => {
   return (
     <AppContainer>
       <SideNav />
-      <div>
-        {/* list */}
-        {/* map */}
+      <div css={{ position: 'relative' }}>
+        <Map />
+        <ListWrapper />
+        <CitySelector />
+        <ViewToggle />
         {/* details card */}
       </div>
     </AppContainer>

@@ -1,3 +1,0 @@
-/* prevision section */
-/* equipments */
-/* ocurrences */
