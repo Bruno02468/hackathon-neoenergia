@@ -42,7 +42,6 @@ def subestacao(cod_subestacao):
 
 # retorna uma lista geral de equipamentos
 def equipamentos(cod_subestacao):
-  print(cod_subestacao)
   cur = conn.cursor()
   cur.execute("SELECT codigo, tipo, fase, ox, oy, clientes FROM equipamentos "
               "WHERE SUBSTR(codigo, 1, 3)=?;", (cod_subestacao,))
@@ -67,12 +66,24 @@ def equipamento(codigo):
     resultados = { **resultados, **dict(resumo_falhas) }
 
   cur = conn.cursor()
+  cur.execute("SELECT nome AS nome_sub, cidade FROM subestacoes WHERE sigla=?;",
+              (codigo[:3],))
+  infocid = cur.fetchone()
+  cidade = "NULL"
+  if infocid:
+    resultados = { **resultados, **dict(infocid) }
+  cidade = infocid["cidade"]
+
+  cur = conn.cursor()
   cur.execute("SELECT AVG(chuva.mm) AS avg_mm, AVG(vento.velocidade) AS "
               "avg_velocidade FROM chuva, vento WHERE vento.data = chuva.data "
-              "AND vento.subestacao = chuva.subestacao AND chuva.subestacao IN (SELECT nome "
-              "FROM subestacoes WHERE sigla=?) AND chuva.data IN (SELECT SUBSTR("
+              "AND vento.cidade = chuva.cidade AND chuva.cidade IN "
+              "(SELECT cidade FROM "
+              "subestacoes WHERE sigla=?) AND chuva.data IN (SELECT SUBSTR("
               "inicio, 1, 10) FROM ocorrencias WHERE equipamento=? AND "
-              "DESCRICAO LIKE \"%AMBI%\");", (codigo, codigo))
+              "DESCRICAO LIKE \"%AMBI%\") AND chuva.cidade = vento.cidade AND "
+              "vento.cidade LIKE ?;", (codigo[:3], codigo,
+                                             util.str_simplify(cidade)))
   falhas_clima = cur.fetchone()
   if falhas_clima:
     resultados = { **resultados, **dict(falhas_clima) }
