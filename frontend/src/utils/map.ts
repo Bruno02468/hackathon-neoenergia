@@ -138,7 +138,7 @@ export function updateData(id: SourcesIds, data: Marker[]) {
         properties: { type: item.type },
         geometry: {
           type: 'Point',
-          coordinates: item.lngLat,
+          coordinates: [item.lat, item.long],
         },
       })),
     });
@@ -209,3 +209,9 @@ export function destroy() {
     map = null;
   }
 }
+
+updateData('equipments-data', [
+  {
+
+  }
+])

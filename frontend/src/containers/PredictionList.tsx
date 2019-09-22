@@ -42,7 +42,7 @@ const PredictionList = () => {
           Object.keys(data).forEach(day => {
             Object.keys(data[day].equipamentos).forEach(equipment => {
               const relEquipment = equipments && equipments.find(item => item.codigo === equipment);
-              const lngLat = relEquipment ? utm.convertUtmToLatLng(relEquipment.ox, relEquipment.oy, 32) : null;
+              const lngLat = relEquipment ? utm.convertUtmToLatLng(item.ox, item.oy, 23, 'K') : undefined;
 
               if (data[day].equipamentos[equipment] !== 'BAIXO') {
                 predictions.push({
@@ -50,7 +50,7 @@ const PredictionList = () => {
                   data: day,
                   equipment,
                   risco: data[day].equipamentos[equipment],
-                  lngLat,
+                  lngLat: [lngLat.lng, lngLat.lat],
                   clima: data[day].tempo,
                 });
               }

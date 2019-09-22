@@ -8,8 +8,8 @@ type equipmentsState = {
         codigo: string;
         tipo: string;
         fase: string;
-        ox: number;
-        oy: number;
+        lat: number;
+        long: number;
         clientes: string;
       }[]
     | null;
